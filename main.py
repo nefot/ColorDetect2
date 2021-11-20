@@ -45,7 +45,7 @@ cv2.createTrackbar("Val Max", "TrackBars", 255, 255, empty)
 
 def getCont(img):
     contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    print(len(contours))
+    #print(len(contours))
     for cnt in contours:
         area = cv2.contourArea(cnt)
         if area > 1000:
@@ -72,7 +72,7 @@ while True:
     imgResult = cv2.bitwise_and(img, img, mask=mask)
     cv2.imshow("imgResult", imgResult)
 
-    print(*lower, upper, "sep")
+    #print(*lower, upper, "sep")
     # cv2.imshow("Orig", img)
     if cv2.waitKey(1) & 0xFF == 27:  # ord('q'):
         break
