@@ -57,8 +57,8 @@ class HandDetector:
 def main():
     cTime =0
     pTime =0
-    frameWidth = 640
-    frameHight = 480
+    frameWidth = 1080
+    frameHight = 720
 
     cap = cv2.VideoCapture(0)
     cap.set(3, frameWidth)
@@ -74,7 +74,6 @@ def main():
         pTime = cTime
         cv2.putText(img,str(int(fps)),(10,70),cv2.FONT_HERSHEY_PLAIN,3,(255,255,255), 4)
         cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 0), 2)
-        cv2.imshow("imgResult", img)
         if cv2.waitKey(1) & 0xFF == 27:  # ord('q'): # 27 - это Esc
             break
 
