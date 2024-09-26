@@ -11,19 +11,19 @@ findIndex = [4, 8, 12, 16, 20]
 while True:
     success, img = cap.read()
     img = cv2.flip(img, 1)
-    img = detector.findHands(img,draw = True)
-    landMarksList = detector.findPosition(img,draw = True)
+    img = detector.findHands(img, draw=True)
+    landMarksList = detector.findPosition(img, draw=True)
     # print(landMarksList)
     if landMarksList:
-        fingers=[]
-        if landMarksList[findIndex[0]][1]>landMarksList[findIndex[0]-2][1]:
+        fingers = []
+        if landMarksList[findIndex[0]][1] > landMarksList[findIndex[0] - 2][1]:
             fingers.append(0)
 
         else:
             fingers.append(1)
 
-        for id in range(1,5):
-            if landMarksList[findIndex[id]][2]>landMarksList[findIndex[id]-2][2]:
+        for id in range(1, 5):
+            if landMarksList[findIndex[id]][2] > landMarksList[findIndex[id] - 2][2]:
                 fingers.append(0)
 
             else:

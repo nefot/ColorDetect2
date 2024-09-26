@@ -3,15 +3,10 @@ import numpy as np
 import mediapipe as mp
 import numpy as np
 
-myColors = [[25, 72, 133, 40, 255, 255],  # Желтый
+myColors = [[25, 72, 133, 40, 255, 255],
             [68, 115, 0, 121, 255, 255],
-            [68, 115, 0, 121, 255, 255]  # берюзовый
-
-            ]
-myColorsValue = [[0, 255, 255],
-                 [255, 255, 0]
-
-                 ]
+            [68, 115, 0, 121, 255, 255]]
+myColorsValue = [[0, 255, 255], [255, 255, 0]]
 FRAMEWIDTH = 640
 FRAMEHEIGHT = 480
 cap = cv2.VideoCapture(0)
